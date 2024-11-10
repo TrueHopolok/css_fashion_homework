@@ -1,0 +1,190 @@
+/* Vadim Truhanov vt24011 */
+/* TODO: red text of nav bar */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Exa:wght@100..900&display=swap');
+
+body {
+    margin: 0px;
+}
+
+
+
+:root {
+    font-family: 'Lato', 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.title-text {
+    font: 'Lexend Exa';
+    color: black;
+    font-size: 32px;
+}
+
+.big-text {
+    color: black;
+    font-size: 24px;
+}
+
+.text-normal {
+    color: black;
+    font-size: 16px;
+}
+
+.small-text {
+    color: black;
+    font-size: 8px;
+}
+
+.white-text {
+    color: white;
+}
+
+
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 90%;
+    margin-inline: 5%;
+}
+
+.header-top > .title {
+    text-transform: uppercase;
+    color: #3a3328;
+}
+
+.header-top > .search-box {
+    width:  60%;
+}
+
+.header-top > .search-box > input {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;    
+    width: 100%;
+}
+
+.header-top > .links {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 6%;
+    gap: 20px;
+}
+
+
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 90%;
+    margin-inline: 3%;
+    list-style-type: none;
+}
+
+.nav-bar > li > a {
+    text-transform: uppercase;
+    color: #3a3328;
+}
+
+.nav-bar > .no-sub-menu > a {
+    color: green;
+}
+
+.nav-bar > .has-sub-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(99, 82, 67);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: white;
+}
+
+.sub-menu > li {
+    color: white;
+}
+
+.has-sub-menu:hover .sub-menu {
+    display: block;
+}
+
+
+
+#returns {
+    background-color: rgb(99, 82, 67);
+    text-align: center;
+    margin-inline: 15%;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline: 25%;
+}
+
+
+
+#discounts {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+#discounts > .section-col {
+    width:50%;
+}
+
+.discount-ad {
+    background-color: rgb(99, 82, 67);
+    opacity: 70%;
+    text-align:center;
+}
+
+
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#footer > .footer-col {
+    background-color: rgb(192,176,161);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline: 30px;
+}
+
+#footer > .footer-col.left-col {
+    flex-grow: 2;
+    text-align: end;
+}
+
+#footer > .footer-col.middle-col {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#footer > .footer-col.right-col {
+    flex-grow: 2;
+    text-align: start;
+}
