@@ -12,6 +12,8 @@ body {
 :root {
     font-family: 'Lato', 'Times New Roman', Times, serif;
     font-size: 16px;
+
+    --color-red: rgb(205, 29, 46);
 }
 
 a {
@@ -20,14 +22,17 @@ a {
 }
 
 .title-text {
-    font: 'Lexend Exa';
+    font-family: 'Lexend Exa', 'Times New Roman', 'Times', serif;
     color: black;
-    font-size: 32px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 4px;
 }
 
 .big-text {
     color: black;
-    font-size: 24px;
+    font-size: 48px;
+    margin: 16px;
 }
 
 .text-normal {
@@ -37,11 +42,15 @@ a {
 
 .small-text {
     color: black;
-    font-size: 8px;
+    font-size: 11px;
 }
 
 .white-text {
     color: white;
+}
+
+.red-text {
+    color: var(--color-red);
 }
 
 
@@ -80,6 +89,10 @@ a {
     gap: 20px;
 }
 
+.header-top > .links > a:hover {
+    opacity: 0.7;
+}
+
 
 
 .nav-bar {
@@ -97,8 +110,12 @@ a {
     color: #3a3328;
 }
 
-.nav-bar > .no-sub-menu > a {
+.nav-bar > .no-sub-menu:first-child > a {
     color: green;
+}
+
+.nav-bar > .no-sub-menu:last-child > a {
+    color: var(--color-red);
 }
 
 .nav-bar > .has-sub-menu {
@@ -130,11 +147,13 @@ a {
 #returns {
     background-color: rgb(99, 82, 67);
     text-align: center;
+    margin-top: 10px;
     margin-inline: 15%;
+    margin-bottom: 10px;
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-inline: 25%;
+    padding-inline: 23%;
 }
 
 
@@ -143,18 +162,64 @@ a {
     display: flex;
     flex-direction: row;
     width:100%;
-    justify-content:space-evenly;
-    align-items: center;
+    justify-content:stretch;
+    align-items: stretch;
 }
 
 #discounts > .section-col {
-    width:50%;
+    width: 50%;
 }
 
-.discount-ad {
-    background-color: rgb(99, 82, 67);
-    opacity: 70%;
+#discounts > .section-col > img {
+    width: 100%;
+    height: 100%;
+}
+
+#discounts > .discount-ad {
+    background-color: rgb(192,176,161);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align:center;
+}
+
+.buttons {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.buttons > a {
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-inline: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 25px;
+    transition: box-shadow 0.3s ease;
+}
+
+.buttons > a:hover {
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);;
+}
+
+.sale-card > .buttons > a {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    border-color: white;
+}
+
+.sale-card > .text-normal {
+    margin-top: 20px;   
+    margin-bottom: 30px;
+}
+
+.sale-card {
+    background-color: var(--color-red);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
@@ -187,4 +252,51 @@ a {
 #footer > .footer-col.right-col {
     flex-grow: 2;
     text-align: start;
+}
+
+
+
+.product-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex: 1 1 auto;
+    justify-content: stretch;
+    width: 100%
+}   
+
+.product-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: stretch;
+    width: 50%
+}
+
+.product-card {
+    width: calc(100%/3);
+}
+
+.product-image {
+    position: relative;
+}
+
+.product-image > img {
+    width: 100%;
+    object-fit:scale-down;
+}
+
+.product-image > .image-text {
+    position:absolute;
+    bottom: 8px;
+    right: 2px;
+    background: rgb(99, 82, 67, 0.7);
+    padding: 10px;
+    border-radius: 25px;
+    color: white;
+}
+
+.product-price {
+    font-weight: bold;
 }
